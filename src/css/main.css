@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5 {
 }
 
 header {
-  background-color: #64748b;
+  background-color: #71717a;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -114,12 +114,16 @@ header {
 main {
   height: 80vh;
   width: 80%;
-  background-color: #f8fafc;
+  background-color: #fafafa;
   margin: 0;
+}
+main > img {
+  width: 200px;
+  height: 100px;
 }
 
 footer {
-  background-color: #64748b;
+  background-color: #71717a;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -148,4 +152,5 @@ footer {
   background-color: #e2e8f0;
   padding: 24px;
   border-radius: 8px;
+  box-shadow: 6px 7px 10px -5px gray;
 }
