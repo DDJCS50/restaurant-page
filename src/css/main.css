@@ -97,29 +97,42 @@ header {
   justify-content: center;
   align-items: center;
 }
-
-#sidebar {
-  height: 80vh;
-  width: 20%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 12px;
-  gap: 12px;
-  background-color: #cbd5e1;
+header > h1 {
+  font-size: 2rem;
 }
 
 main {
   height: 80vh;
-  width: 80%;
+  width: 100%;
   background-color: #fafafa;
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-main > img {
-  width: 200px;
-  height: 100px;
+main > p {
+  background-color: #e2e8f0;
+  display: inline-block;
+  width: 800px;
+  font-size: 3rem;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 6px 7px 10px -5px gray;
+}
+main > #cardBox:first-child {
+  height: 200px;
+  justify-content: center;
+}
+main > #cardBox:first-child div.card {
+  height: 75px;
+  width: 150px;
+  background-color: #e2e8f0;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 footer {
@@ -134,8 +147,8 @@ footer {
 #cardBox {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
   padding: 24px;
   overflow: auto;
