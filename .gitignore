@@ -2,4 +2,3 @@ node_modules
 *.scss
 *.json
 *config.js
-runtime*
