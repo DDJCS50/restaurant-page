@@ -127,12 +127,13 @@ main > #cardBox:first-child {
   height: 200px;
   justify-content: center;
 }
-main > #cardBox:first-child div.card {
+main > #cardBox:first-child button.card {
   height: 75px;
   width: 150px;
   background-color: #e2e8f0;
   font-weight: bold;
   font-size: 1.25rem;
+  color: black;
 }
 
 footer {
@@ -166,4 +167,23 @@ footer {
   padding: 24px;
   border-radius: 8px;
   box-shadow: 6px 7px 10px -5px gray;
+}
+
+.pizzaCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  width: 300px;
+  background-color: #e2e8f0;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 6px 7px 10px -5px gray;
+  font-weight: bold;
+}
+.pizzaCard > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
 }

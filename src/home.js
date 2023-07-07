@@ -1,13 +1,7 @@
-import pizza from './pizza.jpg';
+import renderMenuContent from "./menu";
 
-export default function makeStarterPage() {
-  const content = document.querySelector('#content');
-  const header = document.createElement('header');
-  const main = document.createElement('main');
-  const footer = document.createElement('footer');
-  
-  const headline = document.createElement('h1');
-  headline.innerText = 'Pepino\'s Pizza';
+export default function renderHomePage() {
+  const main = document.querySelector('main');
 
   const tabBox = document.createElement('div');
   tabBox.setAttribute('id', 'cardBox');
@@ -38,10 +32,7 @@ export default function makeStarterPage() {
   const testimonialThree = document.createElement('div');
   testimonialThree.setAttribute('class', 'card');
   testimonialThree.innerText = 'Pepino\'s Pizza is the best!';
-  
-  main.style.backgroundImage = "url('./images/pizza.jpg')";
-  
-  header.appendChild(headline);
+
   main.appendChild(tabBox);
   tabBox.appendChild(menuTab);
   tabBox.appendChild(contactTab);
@@ -51,7 +42,10 @@ export default function makeStarterPage() {
   testimonialBox.appendChild(testimonialTwo);
   testimonialBox.appendChild(testimonialThree);
 
-  content.appendChild(header);
-  content.appendChild(main);
-  content.appendChild(footer);
+  const menuBtn = document.querySelector('#menu');
+
+  menuBtn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    renderMenuContent();
+  });
 }
