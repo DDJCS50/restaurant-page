@@ -3,6 +3,7 @@ import bbq from './bbq-pizza.jpg';
 import artisan from './artisan-pizza.jpg';
 import margherita from './margherita-pizza.jpg';
 import renderHomePage from './home';
+import renderContactContent from './contact';
 
 export default function renderMenuContent() {
   const main = document.querySelector('main');
@@ -18,6 +19,7 @@ export default function renderMenuContent() {
 
   const contactTab = document.createElement('button');
   contactTab.setAttribute('class', 'card');
+  contactTab.setAttribute('id', 'contact');
   contactTab.innerText = 'Contact';
 
   const pizzaBox = document.createElement('div');
@@ -69,5 +71,11 @@ export default function renderMenuContent() {
     event.stopPropagation();
     main.innerHTML = '';
     renderHomePage();
+  });
+
+  const contactBtn = document.querySelector('#contact');
+  contactBtn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    renderContactContent();
   });
 }

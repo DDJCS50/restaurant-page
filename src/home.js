@@ -1,4 +1,5 @@
 import renderMenuContent from "./menu";
+import renderContactContent from "./contact";
 
 export default function renderHomePage() {
   const main = document.querySelector('main');
@@ -13,6 +14,7 @@ export default function renderHomePage() {
 
   const contactTab = document.createElement('button');
   contactTab.setAttribute('class', 'card');
+  contactTab.setAttribute('id', 'contact');
   contactTab.innerText = 'Contact';
 
   const blurb = document.createElement('p');
@@ -43,9 +45,14 @@ export default function renderHomePage() {
   testimonialBox.appendChild(testimonialThree);
 
   const menuBtn = document.querySelector('#menu');
-
   menuBtn.addEventListener('click', function(event) {
     event.stopPropagation();
     renderMenuContent();
+  });
+
+  const contactBtn = document.querySelector('#contact');
+  contactBtn.addEventListener('click', function(event) {
+    event.stopPropagation();
+    renderContactContent();
   });
 }

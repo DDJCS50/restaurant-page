@@ -19,6 +19,7 @@ export default function makeStarterPage() {
 
   const contactTab = document.createElement('button');
   contactTab.setAttribute('class', 'card');
+  contactTab.setAttribute('id', 'contact');
   contactTab.innerText = 'Contact';
 
   const blurb = document.createElement('p');
